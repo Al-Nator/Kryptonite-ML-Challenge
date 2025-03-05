@@ -25,6 +25,9 @@ import onnxruntime as ort
 from torchvision import transforms
 from aligner.wrapper import CVLFaceAlignmentModel, ModelConfig
 
+import warnings
+warnings.filterwarnings("ignore")
+
 # Глобальные переменные
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 ALIGNER = None
@@ -44,7 +47,7 @@ def load_and_transform_cv2(path, target_size=(112,112)):
     if img_rgb.shape[:2] != target_size:
         img_rgb = cv2.resize(img_rgb, target_size, interpolation=cv2.INTER_LINEAR)
     tensor = torch.from_numpy(img_rgb).permute(2,0,1).float() / 255.0
-    return (tensor - 0.5) / 0.5  # [-1,1]
+    return (tensor - 0.5) / 0.5
 
 
 def load_and_align_chunk(chunk_pairs, align_batch_size, num_load_workers):
@@ -114,6 +117,7 @@ def create_ort_session(model_path):
     session = ort.InferenceSession(model_path, sess_options=options, providers=providers)
     input_name = session.get_inputs()[0].name
     return session, input_name
+
 
 def unified_inference(model_path, input_dir, batch_size, chunk_size,
                       align_batch_size, num_load_workers, num_infer_workers, chunk_workers):
