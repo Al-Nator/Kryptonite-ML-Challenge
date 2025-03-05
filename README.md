@@ -1,8 +1,13 @@
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/0ede8943-9d0c-4973-a828-91885a503f55" width="400">
+    <img src="https://github.com/user-attachments/assets/81cdbc21-3b92-4116-b04c-4a746beb3e53" height="250">
 </p>
 
-<h1 align="center">Kryptonite ML Challenge – Команда MMG</h1>
+<h1 align="center">
+    Kryptonite ML Challenge 
+    <br>
+    Команда MMG
+</h1>
+
 <br>
 
 ## 📝 Оглавление
