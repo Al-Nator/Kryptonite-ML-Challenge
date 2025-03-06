@@ -120,3 +120,6 @@ dependencies:
       - transformers==4.47.0
       - urllib3==2.3.0
       - widgetsnbextension==4.0.13
+      - uvicorn==0.34.0
+      - fastapi==0.115.11
+      - python-multipart==0.0.20
