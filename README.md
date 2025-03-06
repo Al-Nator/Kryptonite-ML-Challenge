@@ -133,7 +133,7 @@ python3 scripts/inference.py --model models/onnx/ckpt_epoch1_batch20_acc0.9597_e
 
 *В инференсе используется [aligner](https://huggingface.co/minchul/cvlface_DFA_resnet50) для обрезания и выравнивания изображений.
 
-<a id="inference"></a>
+<a id="inference-page"></a>
 ## 🌐 Инференс на веб-сайте
 
 Скачиваем все предобученные модели с гугл диска:
