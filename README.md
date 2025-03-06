@@ -13,26 +13,22 @@
 ## 📝 Оглавление
 
 1. [Шапка](#demo)
-    - [Демо](#demo)
     - [Описание задачи](#description)
-    - [Данные](#data)
+    - [Демо](#demo)
     - [Ссылки](#links)
+    - [Данные](#data)
     - [Технологический стек](#tech-stack)
+    - [Структура проекта](#project-structure)
     <!-- - [Состав команды]() -->
 2. [Установка и запуск](#cloning)
     - [Клонирование](#cloning)
-    - [Запуск в контейнере](#container)
     - [Запуск в локальной среде](#local)
+    - [Запуск в контейнере](#container)
     - [Инференс](#inference)
     - [Инференс на веб-сайте](#inference-page)
     - [Обучение](#training)
     - [Конвертация в onnx](#onnx)
-3. [Структура проекта](#project-structure)
-    - [Масштабирование](#scaling)
-
-<a id="demo"></a>
-## 🎥 Демо
-<видео-gif тут>
+3. [Масштабирование](#scaling)
 
 <a id="description"></a>
 ## 🧐 Описание задачи
@@ -44,18 +40,24 @@
 * различать снимки разных людей
 * распознавать фальшивые изображения, созданные с помощью DeepFake-технологий, без использования модулей защиты от спуфинга
 
-<a id="data"></a>
-### 📁 Данные
-Перед началом работы необходимо загрузить данные и разместить их в папке `data`. 
-
-- **Данные для обучения**: [Скачать по ссылке](https://storage.codenrock.com/companies/codenrock-13/contests/kryptonite-ml-challenge/train.zip)
-- **Данные для теста**: [Скачать по ссылке](https://storage.codenrock.com/companies/codenrock-13/contests/kryptonite-ml-challenge/test_public.zip)
+<a id="demo"></a>
+## 🎥 Демо
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/1b655ab0-f6b3-480c-bc7f-4e3fc93a1b07" alt="demo" width="100%">
+</div>
 
 <a id="links"></a>
 ## 🔗 Ссылки
 Лендинг: [kryptonite-ml.ru](https://kryptonite-ml.ru)  
 Репозиторий: [git.codenrock.com/kryptonite-ml-challenge-1347](https://git.codenrock.com/kryptonite-ml-challenge-1347)  
 Тестирующая система: [codenrock.com/contests/kryptonite-ml-challenge](https://codenrock.com/contests/kryptonite-ml-challenge/)
+
+<a id="data"></a>
+### 📁 Данные
+Перед началом работы необходимо загрузить данные и разместить их в папке `data`. 
+
+- **Данные для обучения**: [Скачать по ссылке](https://storage.codenrock.com/companies/codenrock-13/contests/kryptonite-ml-challenge/train.zip)
+- **Данные для теста**: [Скачать по ссылке](https://storage.codenrock.com/companies/codenrock-13/contests/kryptonite-ml-challenge/test_public.zip)
 
 <a id="tech-stack"></a>
 ## 🛠 Технологический стек
@@ -69,11 +71,31 @@
 - **Обработка данных:** PIL, NumPy, torchvision
 - **CLI и утилиты:** argparse, tqdm
 
+<a id="project-structure"></a>
+## 🗂 Структура проекта
+```nushell
+.
+├── app
+│   ├── __init__.py
+...
+```
+
 <a id="cloning"></a>
 ## 📋 Клонирование
 ```nushell
 git clone https://github.com/kekwak/Kryptonite-ML-Challenge.git
 cd Kryptonite-ML-Challenge
+```
+
+<a id="local"></a>
+## 🖥 Запуск в локальной среде
+В проекте используется анаконда.  
+* При установке зависимостей этим способом могут возникнуть проблемы.
+
+```nushell
+conda env create -f environment.yml && conda activate krypto
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126 --force-reinstall
+pip3 install numpy==2.2.3
 ```
 
 <a id="container"></a>
@@ -89,17 +111,6 @@ cd Kryptonite-ML-Challenge
 а также запуск через альтернативный докерфайл:
 ```nushell
 ...
-```
-
-<a id="local"></a>
-## 🖥 Запуск в локальной среде
-В проекте используется анаконда.  
-* При установке зависимостей этим способом могут возникнуть проблемы.
-
-```nushell
-conda env create -f environment.yml && conda activate krypto
-pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126 --force-reinstall
-pip3 install numpy==2.2.3
 ```
 
 <a id="inference"></a>
@@ -145,7 +156,7 @@ python3 models/download_pretrained_models.py --all
 ```nushell
 cd web && python3 -m uvicorn main:app --host 0.0.0.0
 ```
-Веб-страничка будет длступна по ссылке [0.0.0.0:8000](http://0.0.0.0:8000)
+Веб-страничка будет длступна по ссылке [0.0.0.0:8000](http://0.0.0.0:8000).
 
 <a id="training"></a>
 ## 📚 Обучение
@@ -164,15 +175,6 @@ python3 models/download_pretrained_models.py --all
 Для конвертации обученной модели в onnx формат достаточно использовать команду:
 ```nushell
 python3 scripts/convert.py --checkpoint path/to/model.ckpt --output_model path/to/onnx_model.onnx
-```
-
-<a id="project-structure"></a>
-## 🗂 Структура проекта
-```nushell
-.
-├── app
-│   ├── __init__.py
-...
 ```
 
 <a id="scaling"></a>
