@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/static/style.css">
+	<link rel="icon" href="/static/images/fav2.png">
+	
+	<title>MMG HACK</title>
+</head>
+<body>
+	<canvas id="backgroundCanvas"></canvas>
+	<div id="loading-spinner" class="spinner hidden"></div>
+	<div id="loading" class="loading-text">MMG</div>
+	<div id="main-content" class="hidden">
+		<!-- Секция: О нашей команде -->
+		<section id="team" class="section">
+			<div class="content-wrapper"> <span>MMG</span>
+				<p>Команда Финансового Университета ИТиАБД</p>
+				<button class="creator-button" onclick="window.open('/static/about.html', '_blank')">Наша команда</button>
+			</div>
+		</section>
+		<!-- Секция: О модели -->
+		<section id="model" class="section section_model">
+			<div class="content-wrapper">
+				<h2>О проекте</h2>
+				<p>Поддельные изображения и видео, созданные с помощью технологии DeepFake, представляют угрозу для цифровой безопасности. Они могут быть настолько реалистичными, что их сложно отличить от настоящих.</p>
+				<p>Проект направлен на создание модели распознавания лиц, с упором на качество верификации а также на скорость детекции.</p>
+				<p>В качестве бейзлайна был взята модель Кима Минчула – AdaFace на базе ResNet101 совместно с aligner для изображений.</p>
+				<p>При обучении использовались пары изображений, чтобы:<br>
+					•	Увеличить расстояние между реальными и фейковыми фото, а также между реальными фото разных людей.<br>
+					•	Уменьшить расстояние между реальными фото одного и того же человека.<br></p>
+				<p>В качестве loss использовалась адаптивная маржинальная функция.</p>
+				<p>Итоговая модель обладает высокой устойчивостью к дипфейк атакам и демонстрирует высокую точность в задаче распознавания лиц.</p>
+			</div>
+		</section>
+		<!-- Секция тестирования -->
+		<section id="testing" class="section">
+			<div class="content-wrapper">
+				<h2>Тестирование</h2>
+				<div class="upload-results-container">
+					<div class="upload-section">
+						<h3>Загрузка фотографий</h3>
+						<!-- <input type="file" class="upload-box" id="fileInput" multiple="" accept="image/*" onchange="validateFiles()"> -->
+						<label for="fileInput" class="upload-box">Перетащите файлы сюда</label>
+						<input type="file" id="fileInput" multiple accept="image/*" onchange="validateFiles()" style="display: none;">
+						<p>Загрузите от 2 до 10 фотографий</p>
+						<button class="button" onclick="uploadFiles()">Отправить</button>
+					</div>
+					<div class="results-section">
+						<h3>Результат</h3>
+						<div class="comparison-result" id="comparisonResult">
+							<div class="person-row">
+								<div class="same-person"> <img src="/static/example/0.jpeg" alt="Фото 1" class="uploaded-photo"> </div>
+								<div class="same-person"> <img src="/static/example/1.jpeg" alt="Фото 2" class="uploaded-photo"> </div>
+							</div>
+							<div class="verification-result button-verified"> Верифицировано: 0.75 </div>
+						</div>
+					</div>
+				</div>
+				<div class="result-table-block" id="resultTableBlock" style="display: block;">
+					<h3>Таблица результатов</h3>
+					<table class="results-table" id="resultsTable">
+						<tr>
+							<th></th>
+							<th><img src="/static/example/2.jpeg" alt="0.jpg" class="table-image"></th>
+							<th><img src="/static/example/3.jpeg" alt="2.jpg" class="table-image"></th>
+							<th><img src="/static/example/4.jpeg" alt="1.jpg" class="table-image"></th>
+							<th><img src="/static/example/5.jpeg" alt="5.jpg" class="table-image"></th>
+						</tr>
+						<tr>
+							<td><img src="/static/example/2.jpeg" alt="0.jpg" class="table-image"></td>
+							<td>NULL</td>
+							<td class="similarity-high">0.90</td>
+							<td class="similarity-low">0.05</td>
+							<td class="similarity-low">0.00</td>
+						</tr>
+						<tr>
+							<td><img src="/static/example/3.jpeg" alt="2.jpg" class="table-image"></td>
+							<td class="similarity-high">0.90</td>
+							<td>NULL</td>
+							<td class="similarity-low">0.04</td>
+							<td class="similarity-low">0.00</td>
+						</tr>
+						<tr>
+							<td><img src="/static/example/4.jpeg" alt="1.jpg" class="table-image"></td>
+							<td class="similarity-low">0.05</td>
+							<td class="similarity-low">0.04</td>
+							<td>NULL</td>
+							<td class="similarity-low">0.00</td>
+						</tr>
+						<tr>
+							<td><img src="/static/example/5.jpeg" alt="5.jpg" class="table-image"></td>
+							<td class="similarity-low">0.00</td>
+							<td class="similarity-low">0.00</td>
+							<td class="similarity-low">0.00</td>
+							<td>NULL</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</section>
+	</div>
+	<script src="/static/main.js"></script>
+</body>
+</html>
