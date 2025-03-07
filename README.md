@@ -14,7 +14,7 @@
 
 <ol type="I">
   <li>
-    <a href="#description">Шапка</a>
+    <b>Шапка</b>
     <ul>
       <li><a href="#description">Описание задачи</a></li>
       <li><a href="#demo">Демо</a></li>
@@ -23,7 +23,7 @@
     </ul>
   </li>
   <li>
-    <a href="#tech-stack">Проект</a>
+    <b>Проект</b>
     <ul>
       <li><a href="#tech-stack">Технологический стек</a></li>
       <li><a href="#project-structure">Структура проекта</a></li>
@@ -31,7 +31,7 @@
     </ul>
   </li>
   <li>
-    <a href="#cloning">Установка</a>
+    <b>Установка</b>
     <ul>
       <li><a href="#cloning">Клонирование</a></li>
       <li><a href="#local">Запуск в локальной среде</a></li>
@@ -39,7 +39,7 @@
     </ul>
   </li>
   <li>
-    <a href="#inference">Запуск скриптов</a>
+    <b>Запуск скриптов</b>
     <ul>
       <li><a href="#inference">Инференс</a></li>
       <li><a href="#inference-page">Инференс на веб-сайте</a></li>
@@ -48,7 +48,10 @@
     </ul>
   </li>
   <li>
-    <a href="#scaling">Планы масштабирования системы</a>
+    <b>Планы на будущее</b>
+    <ul>
+      <li><a href="#scaling">Масштабирование системы</a></li>
+    </ul>
   </li>
 </ol>
 
@@ -70,16 +73,16 @@
 
 <a id="links"></a>
 ## 🔗 Ссылки
-Лендинг: [kryptonite-ml.ru](https://kryptonite-ml.ru)  
-Репозиторий: [git.codenrock.com/kryptonite-ml-challenge-1347](https://git.codenrock.com/kryptonite-ml-challenge-1347)  
-Тестирующая система: [codenrock.com/contests/kryptonite-ml-challenge](https://codenrock.com/contests/kryptonite-ml-challenge/)
+**Лендинг:** [kryptonite-ml.ru](https://kryptonite-ml.ru)  
+**Репозиторий:** [git.codenrock.com/kryptonite-ml-challenge-1347](https://git.codenrock.com/kryptonite-ml-challenge-1347)  
+**Тестирующая система:** [codenrock.com/contests/kryptonite-ml-challenge](https://codenrock.com/contests/kryptonite-ml-challenge/)
 
 <a id="data"></a>
 ## 📁 Данные
 Перед началом работы необходимо загрузить данные и разместить их в папке `data`. 
 
-- **Данные для обучения**: [Скачать по ссылке](https://storage.codenrock.com/companies/codenrock-13/contests/kryptonite-ml-challenge/train.zip)
-- **Данные для теста**: [Скачать по ссылке](https://storage.codenrock.com/companies/codenrock-13/contests/kryptonite-ml-challenge/test_public.zip)
+- **Данные для обучения:** [Скачать по ссылке](https://storage.codenrock.com/companies/codenrock-13/contests/kryptonite-ml-challenge/train.zip)
+- **Данные для теста:** [Скачать по ссылке](https://storage.codenrock.com/companies/codenrock-13/contests/kryptonite-ml-challenge/test_public.zip)
 
 <a id="tech-stack"></a>
 ## 🛠 Технологический стек
@@ -111,7 +114,7 @@ cd Kryptonite-ML-Challenge
 
 <a id="local"></a>
 ## 🖥 Запуск в локальной среде
-В проекте используется анаконда.  
+В проекте используется анаконда.
 * При установке зависимостей этим способом могут возникнуть проблемы.
 
 ```nushell
@@ -164,7 +167,7 @@ python3 scripts/inference.py --model models/onnx/ckpt_epoch1_batch20_acc0.9597_e
 ```
 В аргументах достаточно указать только модель, но также есть возможность указать другую папку с изображениями с помощью аргумента `--input_dir data/path/to/images`.
 
-*В инференсе используется [aligner](https://huggingface.co/minchul/cvlface_DFA_resnet50) для обрезания и выравнивания изображений.
+* В инференсе используется [aligner](https://huggingface.co/minchul/cvlface_DFA_resnet50) для обрезания и выравнивания изображений.
 
 <a id="inference-page"></a>
 ## 🌐 Инференс на веб-сайте
@@ -200,7 +203,7 @@ python3 scripts/convert.py --checkpoint path/to/model.ckpt --output_model path/t
 ```
 
 <a id="scaling"></a>
-## 📈 Планы масштабирования системы
+## 📈 Масштабирование системы
 - Использование более продвинутых и современных DeepFake и FaceSwap моделей
 - Увеличение количества обучающих данных
 - Верификация личности в реальном времени с помощью эталонных изображений
