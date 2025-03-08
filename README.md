@@ -66,6 +66,7 @@
 
 <a id="demo"></a>
 ## 🎥 Демо
+Демо решения запущено на ноутбуке с GeForce GTX 960M (2015г), протестировать его можно [тут](http://5.35.46.26:14500)
 <div align="center">
   <img src="https://github.com/user-attachments/assets/1b655ab0-f6b3-480c-bc7f-4e3fc93a1b07" alt="demo" width="100%">
 </div>
@@ -74,7 +75,7 @@
 ## 🔗 Ссылки
 **Лендинг:** [kryptonite-ml.ru](https://kryptonite-ml.ru)  
 **Репозиторий:** [git.codenrock.com/kryptonite-ml-challenge-1347](https://git.codenrock.com/kryptonite-ml-challenge-1347)  
-**Тестирующая система:** [codenrock.com/contests/kryptonite-ml-challenge](https://codenrock.com/contests/kryptonite-ml-challenge/)
+**Тестирующая система:** [codenrock.com/contests/kryptonite-ml-challenge](https://codenrock.com/contests/kryptonite-ml-challenge)
 
 <a id="data"></a>
 ## 📁 Данные
@@ -161,6 +162,7 @@ pip3 install numpy==2.2.3
 ```nushell
 docker compose run --rm -it --service-ports app
 ```
+*На данном шаге придется немного подождать...
 
 Как только все создастся, активируйте среду для запуска скриптов:
 ```nushell
