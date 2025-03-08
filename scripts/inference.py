@@ -217,5 +217,6 @@ if __name__ == "__main__":
     ALIGNER = CVLFaceAlignmentModel(conf).to(DEVICE)
     ALIGNER.eval()
 
+    # Все параметры уже настроены для достижения максимальной скорости
     unified_inference(args.model, args.input_dir, args.batch_size, args.chunk_size,
                       args.align_batch_size, args.num_load_workers, args.num_infer_workers, args.chunk_workers)

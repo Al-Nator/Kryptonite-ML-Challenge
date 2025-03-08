@@ -131,12 +131,36 @@ canvas {
   background-color: #1c1b47;
 }
 
-
 .upload-section .button {
   margin-top: auto;
   align-self: center;
   max-width: 80%;
 }
+
+.upload-box {
+  border: 2px dashed #ffffff;
+  border-radius: 12px;
+  padding: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  width: 70%;
+  box-sizing: border-box; 
+  max-width: 100%;        
+}
+
+@media only screen and (max-width: 768px) {
+  .upload-box {
+    width: 90%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+
 
 .person-row {
   display: flex;
@@ -154,6 +178,7 @@ canvas {
   border-radius: 12px;
   font-size: 1.5rem;
   color: white;
+  overflow: hidden;
 }
 
 .verification-result {
@@ -312,4 +337,53 @@ canvas {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+
+@media only screen and (max-width: 1280px) {
+  .upload-results-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .upload-section, 
+  .results-section {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .creator-button, .button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .person-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .same-person {
+    width: 90px;      
+    height: auto;     
+    margin: 0.5rem;
+    box-sizing: border-box;
+  }
+  
+  .uploaded-photo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .results-table {
+    overflow-x:scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    min-width: 60px;
+  }
 }
