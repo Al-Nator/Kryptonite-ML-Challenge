@@ -84,7 +84,7 @@
 ## 📁 Данные
 Перед началом работы необходимо загрузить данные и разместить их в папке `data`. 
 
-- **Исходные Данные для обучения:** [Скачать по ссылке](https://storage.codenrock.com/companies/codenrock-13/contests/kryptonite-ml-challenge/train.zip)
+- **Исходные данные для обучения:** [Скачать по ссылке](https://storage.codenrock.com/companies/codenrock-13/contests/kryptonite-ml-challenge/train.zip)
 - **Очищенные данные для обучения:** [Скачать по ссылке](https://drive.google.com/file/d/193Vi9JBxdfLlV32nrw8hb-rls4BTpIkU/view?usp=sharing)
 - **Данные для претрейна:** [Скачать по ссылке](https://drive.google.com/file/d/1muyIwX8c35Bl0OQTfmETGVjBevk3S6CK/view?usp=sharing)
 - **Данные для теста:** [Скачать по ссылке](https://storage.codenrock.com/companies/codenrock-13/contests/kryptonite-ml-challenge/test_public.zip)
@@ -240,7 +240,7 @@ python3 models/download_pretrained_models.py --all
 python3 train/align.py
 ```
 
-Запускаем алгоритм генерации пар для обучения и валидации
+Запускаем алгоритм генерации пар для обучения и валидации:
 ```nushell
 python3 train/generate_pairs.py
 ```
