@@ -43,10 +43,10 @@ def main():
     args = parse_args()
 
     files = {
-        "models/checkpoints/ckpt_epoch1_batch20_acc0.9597_eer0.0282.ckpt": "13D-Zq6Eaydd3KfdOdIGCcHNcTeyXjtwo",  # https://drive.google.com/file/d/13D-Zq6Eaydd3KfdOdIGCcHNcTeyXjtwo
+        "models/checkpoints/ckpt_epoch1_batch6100_acc0.9831_eer0.0165.ckpt": "1btbzoo7s8OVIGSXbuBbTltX4lbM5TsGr",  # https://drive.google.com/file/d/1btbzoo7s8OVIGSXbuBbTltX4lbM5TsGr
         "models/pretrained/adaface_ir101_webface12m.ckpt": "1XCcppcsdPFJX3fImvxbZ0ewQjAouqB4j",  # https://drive.google.com/file/d/1XCcppcsdPFJX3fImvxbZ0ewQjAouqB4j
         "models/pretrained/ckpt_epoch1_batch43000_acc0.9825_eer0.0165.ckpt": "1Bx4P51Xdl2Fl8RuT1XQ_-eJ7Yx3FATv3",  # https://drive.google.com/file/d/1Bx4P51Xdl2Fl8RuT1XQ_-eJ7Yx3FATv3
-        "models/onnx/ckpt_epoch1_batch20_acc0.9597_eer0.0282.onnx": "10EQnwa94kZhcC8uZG56aSXfO_qjE8iCR",  # https://drive.google.com/file/d/10EQnwa94kZhcC8uZG56aSXfO_qjE8iCR
+        "models/onnx/ckpt_epoch1_batch6100_acc0.9831_eer0.0165.onnx": "13l0GqzHyqsSS-aD529O-s6PDRH13qXHF",  # https://drive.google.com/file/d/13l0GqzHyqsSS-aD529O-s6PDRH13qXHF
         "aligner/pretrained_model/model.pt": "17pOLtbze9E5SMkDfUNkXq5DU0TNPbNzr"  # https://drive.google.com/file/d/17pOLtbze9E5SMkDfUNkXq5DU0TNPbNzr
     }
 
