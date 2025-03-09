@@ -429,7 +429,6 @@ python3 train/train.py \
 
 ![image_2025-03-09_19-13-22](https://github.com/user-attachments/assets/96183615-4b56-4771-b77a-34b8b12f718b)
 
-
 <a id="onnx"></a>
 ## 🔄 Конвертация в onnx
 
