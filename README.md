@@ -128,6 +128,7 @@
 │       ├── images
 │       ├── index.html
 │       └── ...
+├── Research-Report-MMG.pdf <------------- PDF Отчет о проделанном исследовании
 ├── docker-compose.yaml <----------------- Конфигурация для docker-compose
 ├── Dockerfile
 ├── environment.yml <--------------------- Список зависимостей Conda
