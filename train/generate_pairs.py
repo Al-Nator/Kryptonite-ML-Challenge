@@ -245,7 +245,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--images_root",
         type=str,
-        default="data/train/images",
+        default="data/train/images_aligned",
         help="Путь к корневой папке изображений"
     )
     parser.add_argument(
