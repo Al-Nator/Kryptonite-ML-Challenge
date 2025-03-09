@@ -36,6 +36,7 @@ MANIFEST
 data/*
 !data/.gitkeep
 wandb/
+**/leaderboard.csv
 
 # Submissions
 submission_*.csv

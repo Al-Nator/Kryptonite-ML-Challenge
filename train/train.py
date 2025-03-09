@@ -6,6 +6,7 @@
 import argparse
 import csv
 import os
+import sys
 
 import numpy as np
 import torch
@@ -18,6 +19,7 @@ from torch.utils.data import DataLoader, Dataset
 from torchvision.transforms import Compose, Normalize, ToTensor
 from tqdm import tqdm
 
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from scripts.utils.utils import load_pretrained_model, load_checkpoint
 
 
