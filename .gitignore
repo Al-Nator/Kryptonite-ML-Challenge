@@ -35,6 +35,7 @@ MANIFEST
 # Data
 data/*
 !data/.gitkeep
+wandb/
 
 # Submissions
 submission_*.csv

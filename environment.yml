@@ -123,3 +123,5 @@ dependencies:
       - uvicorn==0.34.0
       - fastapi==0.115.11
       - python-multipart==0.0.20
+      - scikit-learn==1.6.1
+      - wandb==0.19.8
