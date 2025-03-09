@@ -125,3 +125,4 @@ dependencies:
       - python-multipart==0.0.20
       - scikit-learn==1.6.1
       - wandb==0.19.8
+      - pandas==2.2.3
