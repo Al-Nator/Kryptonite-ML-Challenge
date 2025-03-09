@@ -217,7 +217,7 @@ def main():
     parser.add_argument("--val_csv", type=str,
                         default="data/train/val_pairs.csv",
                         help="Путь к CSV файлу с валидационными парами.")
-    parser.add_argument("--epochs", type=int, default=10,
+    parser.add_argument("--epochs", type=int, default=2,
                         help="Количество эпох обучения.")
     parser.add_argument("--batch_size", type=int, default=32,
                         help="Размер батча для обучения.")

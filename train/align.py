@@ -21,9 +21,8 @@ from aligner.wrapper import CVLFaceAlignmentModel, ModelConfig
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-conf = ModelConfig()
-aligner = CVLFaceAlignmentModel(conf).to(device)
-aligner.eval()
+conf = None
+aligner = None
 
 
 def get_aligned_face(image_path):
@@ -75,6 +74,8 @@ def save_aligned_dataset(original_dir, target_dir):
 
 
 def main():
+    global aligner, conf
+    
     parser = argparse.ArgumentParser(
         description="Выравнивание датасета изображений и сохранение выровненных копий."
     )
@@ -85,6 +86,10 @@ def main():
                         default="data/train/images_aligned",
                         help="Путь для сохранения выровненных изображений")
     args = parser.parse_args()
+
+    conf = ModelConfig()
+    aligner = CVLFaceAlignmentModel(conf).to(device)
+    aligner.eval()
 
     print(f"Выравнивание датасета из {args.input_dir} и сохранение в {args.output_dir}")
     save_aligned_dataset(args.input_dir, args.output_dir)
