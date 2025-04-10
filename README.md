@@ -86,9 +86,9 @@
 
 <a id="links"></a>
 ## 🔗 Ссылки
-**Лендинг:** [kryptonite-ml.ru](https://kryptonite-ml.ru)
-**Репозиторий:** [git.codenrock.com/kryptonite-ml-challenge-1347](https://git.codenrock.com/kryptonite-ml-challenge-1347)
-**Тестирующая система:** [codenrock.com/contests/kryptonite-ml-challenge](https://codenrock.com/contests/kryptonite-ml-challenge)
+- **Лендинг:** [kryptonite-ml.ru](https://kryptonite-ml.ru)
+- **Репозиторий:** [git.codenrock.com/kryptonite-ml-challenge-1347](https://git.codenrock.com/kryptonite-ml-challenge-1347)
+- **Тестирующая система:** [codenrock.com/contests/kryptonite-ml-challenge](https://codenrock.com/contests/kryptonite-ml-challenge)
 
 <a id="data"></a>
 ## 📁 Данные
